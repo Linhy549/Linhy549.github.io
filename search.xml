@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Linux Remote Development</title>
+      <link href="/2023/10/22/Linux-Remote-Development/"/>
+      <url>/2023/10/22/Linux-Remote-Development/</url>
+      
+        <content type="html"><![CDATA[<p>Linux Remote Development</p><h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h2><blockquote><p>Working a project that develop under Linux system in VM. I thought is there any way that can develop the project remotely in my local machine.</p></blockquote><h2 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h2><ol><li><p>Download VScode extension “Remote-ssh”</p><p><img src="/2023/10/22/Linux-Remote-Development/Screenshot1.png"></p></li><li><p>Click “Remote Explorer” icon and add new SSH-Server</p><p><img src="/2023/10/22/Linux-Remote-Development/s2.png"></p></li></ol><p>       Add following: <code>ssh &#123;VM username&#125;@&#123;VM ip address&#125;</code> or you can click setting and modify <code>/.ssh/config</code> file.</p><p>     <img src="/2023/10/22/Linux-Remote-Development/s3.png"></p><ol start="3"><li><p>Click Connect to server, and it pops up a new window. Then enter your password of your server</p><p><img src="/2023/10/22/Linux-Remote-Development/s4.png" alt="Connect to server"></p></li><li><p>You see the server with green color check mark which means we have successfully connect to the server, and next open the folder, it shows up exactly same files that you server has.</p><p><img src="/2023/10/22/Linux-Remote-Development/s5.png" alt="server files"></p></li></ol><p><img src="/2023/10/22/Linux-Remote-Development/s6.png"></p><h2 id="Common-issue"><a href="#Common-issue" class="headerlink" title="Common issue"></a>Common issue</h2><ol><li><p>ssh connect times out</p><blockquote><ul><li><p>Try to close out firewall in server</p></li><li><p>make sure both client and server in the same network</p></li></ul></blockquote></li><li><p>ssh connection refused</p><blockquote><ul><li>change different port (eg: 1220), default was: 22</li></ul></blockquote></li><li><p>How to know both SSH service working properly </p><blockquote><p>Use <code>ping</code> in both sides</p></blockquote></li></ol><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol><li><p><a href="https://blog.csdn.net/Shiny0815/article/details/95336929">Linux open SSH service</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/332390773">Linux open and close Ping service</a></p></li><li><p><a href="https://zhuanlan.zhihu.com/p/404435599">Linux remote connection with SSH</a></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Remote Development </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/07/13/hello-world/"/>
+      <url>/2023/07/13/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Thread</title>
+      <link href="/2023/07/01/Thread/"/>
+      <url>/2023/07/01/Thread/</url>
+      
+        <content type="html"><![CDATA[<h1 id="程序-线程（Thread）-进程-Process"><a href="#程序-线程（Thread）-进程-Process" class="headerlink" title="程序 &amp; 线程（Thread） &amp; 进程 (Process)"></a>程序 &amp; 线程（Thread） &amp; 进程 (Process)</h1><p>程序：编写的代码</p><p>Process：启动一个程序后，生成一个Process，会占用CPU和内存，关闭程序后，Process消灭</p><p>Thread: 比如打开QQ相当于启动一个进程，同时打开多个聊天 就是多线程</p><span id="more"></span><h2 id="并发-（Concurrency）-并行-Parallelism"><a href="#并发-（Concurrency）-并行-Parallelism" class="headerlink" title="并发 （Concurrency） &amp; 并行 (Parallelism)"></a>并发 （Concurrency） &amp; 并行 (Parallelism)</h2><p>并发：一个cpu，交替处理两个进程（比如QQ，微信）</p><p>并行：两个或者多个cpu，分别处理（QQ或者微信）</p><h2 id="线程创建"><a href="#线程创建" class="headerlink" title="线程创建"></a>线程创建</h2><ol><li>继承Thread类，重写run方法</li></ol><blockquote><p>当我们写好程序，点击run程序后，进程开启；然后main线程启动,再启动chatBot子线程。再运行子线程的同时 main线程也在进行，也就是并发（concurrency）。</p><p>重点：当所有的线程结束，进程才会结束。</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test_Threading</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span> <span class="params">(String args[])</span>&#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ChatBot</span>().start();</span><br><span class="line">        System.out.print(<span class="string">&quot;Main thread continuing...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChatBot</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span> <span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//Sub-thread of main thread</span></span><br><span class="line">        System.out.print(<span class="string">&quot;Thread name:&quot;</span> + Thread.currentThread().getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>实现Runnable接口，重写run方法</li></ol><blockquote><p>Java 是单继承的。如果一个类已经有继承父类，那就需要实现Runnable接口。该类需要把对象放入Thread的构造器中，如下：</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test_Tread_Runnable</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span> <span class="params">(String args[])</span>&#123;</span><br><span class="line">        <span class="type">Cat</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(cat);</span><br><span class="line">        thread.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animals</span> &#123;&#125;</span><br><span class="line"><span class="comment">// java is single inheritance, can&#x27;t use &quot;extends Thread&quot;. So need to implement Runnable interface.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span> <span class="keyword">extends</span> <span class="title class_">Animals</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.print(<span class="string">&quot;I&#x27;m a cat..&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="Join-方法"><a href="#Join-方法" class="headerlink" title="Join 方法"></a>Join 方法</h2><p>Join：插队，比如调用A线程的Join方法后，会先执行全部A线程的代码，然后返回原来的线程</p><h2 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h2><p>线程生命周期的六大阶段</p><blockquote><p>new, Runnable, timeWaiting, waiting, blocked, terminate</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Thread </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
